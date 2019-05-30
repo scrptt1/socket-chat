@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap&subset=latin-ext" rel="stylesheet">
+  <title>Chat JS</title>
+</head>
+
+<body>
+  <div class="menu">
+    !!! Chat JS !!!
+  </div>
+  <div class="main">
+    <div class="chat">
+      <div class="msgs">
+      </div>
+      <form id="chat">
+        <input type="text" name="msg" id="msg" autocomplete="off" placeholder="MENSAGEM">
+        <input type="submit" value="Mandar">
+      </form>
+    </div>
+    <div class="chat2">
+      <input type="text" name="nome" id="nome" value="NOME" onclick="this.value = ''">
+      <div class="msgs2">
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" charset="utf-8"></script>
+  <script src="/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
