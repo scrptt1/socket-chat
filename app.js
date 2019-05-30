@@ -19,6 +19,6 @@ io.on('connection', function(socket) {
   });
 });
 
-server = http.listen(() => {
+server = http.listen(process.env.PORT, () => {
   console.log('Server listening on port ' + server.address().port);
 })
