@@ -6,29 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap&subset=latin-ext" rel="stylesheet">
-  <title>Chat JS</title>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">  
 </head>
 
 <body>
-  <div class="menu">
-    !!! Chat JS o melhor chat do mundo (e o mais feio)!!!
-  </div>
-  <div class="main">
-    <div class="chat">
-      <div class="msgs">
-      </div>
-      <form id="chat">
-        <input type="text" name="msg" id="msg" autocomplete="off" placeholder="MENSAGEM">
-        <input type="submit" value="Mandar">
-      </form>
-    </div>
-    <div class="chat2">
-      <input type="text" style="background-color: #FF9999; color: #360;" name="nome" id="nome" value="NOME" onclick="this.value = ''">
-      <div class="msgs2">
 
+  <div class="chat">
+
+    
+    <form id="chat">
+      <div class="input">
+        <label for="nome" style="width: 14vw;">Type your name: </label>
+        <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Name" required style="margin-left: 1vw; width: 75vw;">
       </div>
+        
+        <div class="msgs">
+
+          <div id="msgRecebida">
+            <p>Nome</p>
+            <p>Mensagem x</p>
+            <p>Hora</p>
+          </div>
+
+        </div>
+        <div class="input">
+      <input type="text" name="msg" id="msg" autocomplete="off" placeholder="What are you thinking ?" required style="width: 75vw;">
+      <input type="submit" value="Send" style="margin-left: 1vw; width: 14vw; cursor: pointer;">
     </div>
+    </form>
   </div>
 
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
