@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'Roboto'
 }
 
-.msgs{
+.msgs {
   min-height: 90vh;
   max-height: 90vh;
   width: 90vw;
@@ -19,7 +19,6 @@
   border-radius: 5px;
 }
 
-
 .input {
   box-sizing: border-box;
   min-height: 5vh;
@@ -28,16 +27,14 @@
   align-items: center;
 }
 
-input{
+input {
   padding: 5px;
   box-sizing: border-box;
   border: solid 1px;
   border-radius: 5px
 }
 
-
-
-#mensagemrecebida{
+#mensagemrecebida {
   display: block;
   margin-top: 15px;
   min-width: 45%;
@@ -48,7 +45,7 @@ input{
   padding: 5px;
 }
 
-#mensagemenviada{
+#mensagemenviada {
   min-width: 45%;
   max-width: 45%;
   padding: 5px;
@@ -62,37 +59,75 @@ input{
   margin-bottom: 15px;
 }
 
-.hora{
+.hora {
   text-align: end;
   border-left: 10px;
   border-right: 50px;
   font-size: 12px;
 }
 
-.content{
+.content {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.nome{
-  font-size: 15px
+.nome {
+  font-size: 15px;
+  font-style: bold;
 }
 
-#labelNome{
+#labelNome {
   display: block;
   width: 14vw;
 }
 
-#nome{
-  margin-left: 1vw; width: 75vw;
+#nome {
+  margin-left: 1vw;
+  width: 75vw;
 }
 
-@media screen and (max-width: 765px){
-  #labelNome{
+@media screen and (max-width: 765px) {
+  #labelNome {
     display: none;
   }
-  #nome{
-    margin-left: 1vw; 
+  #nome {
+    margin-left: 1vw;
     width: 90vw;
+  }
+  #mensagemrecebida {
+    display: block;
+    margin-top: 15px;
+    min-width: 80%;
+    max-width: 80%;
+    box-sizing: border-box;
+    border-radius: 7px;
+    background-color: rgba(99, 211, 149);
+    padding: 5px;
+  }
+  #mensagemenviada {
+    min-width: 80%;
+    max-width: 80%;
+    padding: 5px;
+    background-color: #fff;
+    margin-left: 20%;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .msgs {
+    min-height: 90vh;
+    max-height: 90vh;
+    width: 90vw;
+    box-sizing: border-box;
+    border: solid 1px;
+    margin: auto;
+    background: url(/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+    overflow: auto;
+    border-radius: 5px;
   }
 }
