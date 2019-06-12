@@ -9,7 +9,7 @@
   max-height: 90vh;
   width: 90vw;
   box-sizing: border-box;
-  border: solid;
+  border: solid 1px;
   margin: auto;
   background: url(/img/bg.jpg);
   background-size: cover;
@@ -24,33 +24,75 @@
   box-sizing: border-box;
   min-height: 5vh;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 input{
   padding: 5px;
   box-sizing: border-box;
-  border: solid;
+  border: solid 1px;
   border-radius: 5px
 }
 
-.mensagem1{
-  padding: 5px;
-  background-color: rgba(99, 211, 149);
-  width: 45%;
+
+
+#mensagemrecebida{
+  display: block;
+  margin-top: 15px;
+  min-width: 45%;
+  max-width: 45%;
   box-sizing: border-box;
+  border-radius: 7px;
+  background-color: rgba(99, 211, 149);
+  padding: 5px;
 }
 
-.mensagem2{
+#mensagemenviada{
   min-width: 45%;
   max-width: 45%;
   padding: 5px;
   background-color: #fff;
   width: 45%;
   margin-left: 55%;
-  text-align: end;
+  text-align: left;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.hora{
+  text-align: end;
+  border-left: 10px;
+  border-right: 50px;
+  font-size: 12px;
+}
+
+.content{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.nome{
+  font-size: 15px
+}
+
+#labelNome{
+  display: block;
+  width: 14vw;
+}
+
+#nome{
+  margin-left: 1vw; width: 75vw;
+}
+
+@media screen and (max-width: 765px){
+  #labelNome{
+    display: none;
+  }
+  #nome{
+    margin-left: 1vw; 
+    width: 90vw;
+  }
 }

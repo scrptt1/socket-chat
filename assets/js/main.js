@@ -1,13 +1,17 @@
 var socket = io()
 
 
-
-
 $(function() {
   $('form').submit(function(e) {
+    var datahr = new Date()
+
+    hr = datahr.toTimeString().substr(0,5)
+
     e.preventDefault();
-    socket.emit('send msg', $('#msg').val(), $('#nome').val());
-    $('.msgs').append($('<p class="mensagem2">').text($('#msg').val()));
+    socket.emit('send msg',$('#msg').val(), $('#nome').val());
+    $('.msgs').append($('<div id="mensagemenviada">'+
+      '</p> <p class="content">'+$('#msg').val()+
+      '</p> <p class="hora">'+hr+'</p></div>'));
     $('#msg').val('');
     $('#msg').focus();
     return false;
@@ -19,9 +23,9 @@ $(function() {
 
     hr = datahr.toTimeString().substr(0,5)
 
-    $('.msgs').append($('<div id="msgrecebida"> <p id="name" class="mensagem1">'+name+
-      '</p> <p class="mensagem1">'+msg+
-      '</p> <p class="mensagem1">'+hr+'</p></div>'));
+    $('.msgs').append($('<div id="mensagemrecebida"> <p id="name" class="nome">'+name+
+      '</p> <p class="content">'+msg+
+      '</p> <p class="hora">'+hr+'</p></div>'));
 
   });
 });
