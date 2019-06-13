@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto'
+  font-family: 'Roboto';
+  
 }
 
 body{
@@ -55,6 +56,7 @@ input {
   max-width: 45%;
   box-sizing: border-box;
   border-radius: 7px;
+  border-top-left-radius: 0;
   background-color: rgba(99, 211, 149);
   padding: 5px;
 }
@@ -69,6 +71,7 @@ input {
   text-align: left;
   box-sizing: border-box;
   border-radius: 7px;
+  border-top-right-radius: 0;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -81,13 +84,16 @@ input {
 }
 
 .content {
+  word-wrap: break-word;
   margin-top: 5px;
   margin-bottom: 5px;
+  max-width: 95%;
 }
 
 .nome {
   font-size: 15px;
-  font-style: bold;
+  font-weight: bold;
+  font-style: italic
 }
 
 #labelNome {
@@ -98,6 +104,26 @@ input {
 #nome {
   margin-left: 1vw;
   width: 75vw;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333333; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 @media screen and (max-width: 765px) {
@@ -115,6 +141,7 @@ input {
     max-width: 80%;
     box-sizing: border-box;
     border-radius: 7px;
+    border-top-left-radius: 0;
     background-color: rgba(99, 211, 149);
     padding: 5px;
   }
@@ -127,6 +154,7 @@ input {
     text-align: left;
     box-sizing: border-box;
     border-radius: 7px;
+    border-top-right-radius: 0;
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -143,5 +171,6 @@ input {
     padding: 5px;
     overflow: auto;
     border-radius: 5px;
+    
   }
 }

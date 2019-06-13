@@ -30,10 +30,15 @@ $(function() {
       '</p> <p class="hora">'+hr+'</p></div>'));
     $('#msg').val('');
     $('#msg').focus();
+    
+    div = $('.msgs');
+      div.prop("scrollTop", div.prop("scrollHeight"));
     return false;
   });
 
   socket.on('send chat', function(msg, name) {
+
+
 
     var datahr = new Date()
 
@@ -43,5 +48,10 @@ $(function() {
       '</p> <p class="content">'+msg+
       '</p> <p class="hora">'+hr+'</p></div>'));
 
+      div = $('.msgs');
+      div.prop("scrollTop", div.prop("scrollHeight"));
+
   });
+
+   
 });
